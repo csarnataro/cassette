@@ -1,5 +1,7 @@
 type ThumbnailURL = {
   url: string;
+  height: number;
+  width: number;
 }
 
 export interface Album {

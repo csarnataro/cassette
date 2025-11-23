@@ -10,7 +10,7 @@ interface SearchBoxProps {
 export default function SearchBox(props: SearchBoxProps) {
   const { query, setQuery, startSearch } = props;
   return (
-    <View className="border border-gray-300 flex flex-row radius-lg mx-2 rounded-lg items-center px-2">
+    <View className="bg-white border border-gray-300 flex flex-row radius-lg mx-2 rounded-lg items-center px-2">
       <IconSymbol color="gray" name="magnifyingglass" />
       <TextInput
         enterKeyHint="search"
