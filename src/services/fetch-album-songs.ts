@@ -206,12 +206,14 @@ const fetchAlbumSongs = async (browseId: string): Promise<Song[]> => {
     eval: "native",
   }) as any[];
 
-  console.log("************ BEGIN: fetch-albums 99 ************");
-  console.log(songs);
-  console.log("************ END:   fetch-albums 99 ************");
   return songs[0].map((song: any) => {
     const videoId = JSONPath({
       path: "$..navigationEndpoint.watchEndpoint.videoId",
+      json: song,
+      eval: "native",
+    })[0];
+    const playlistId = JSONPath({
+      path: "$..navigationEndpoint.watchEndpoint.playlistId",
       json: song,
       eval: "native",
     })[0];
@@ -220,7 +222,8 @@ const fetchAlbumSongs = async (browseId: string): Promise<Song[]> => {
       json: song,
       eval: "native",
     });
-    return { title, videoId };
+
+    return { title, videoId, playlistId };
   });
 };
 

@@ -1,5 +1,6 @@
 export interface Song {
     title: string;
     duration?: string;
-    playerUrl: string;
+    videoId: string;
+    playlistId: string;
 }

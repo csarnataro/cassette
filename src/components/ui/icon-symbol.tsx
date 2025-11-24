@@ -19,7 +19,13 @@ const MAPPING = {
   // 'chevron.left.forwardslash.chevron.right': 'code',
   // 'chevron.right': 'chevron-right',
   'magnifyingglass': 'search',
-  'clear': 'clear'
+  'clear': 'clear',
+  'forward.fill': 'forward',
+  'backward.fill': 'fast-rewind',
+  // 'back': 'fast-rewind',
+  'play.fill': 'play-arrow',
+  'pause.fill': 'pause',
+  'stop.fill': 'stop'
 } as IconMapping;
 
 /**
